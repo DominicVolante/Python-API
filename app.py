@@ -90,7 +90,9 @@ def delete_product(id):
     db.session.commit()
     return product_schema.jsonify(product)
 
-
+@app.route('/')
+def index():
+    return "<h1>Hey John!</h1>"
 
 #run server
 if __name__ == "__main__":
